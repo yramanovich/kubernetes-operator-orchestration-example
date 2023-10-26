@@ -1,0 +1,4 @@
+## Append samples of your project ##
+resources:
+- orchestration_v1_coinworkflow.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples

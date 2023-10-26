@@ -1,0 +1,12 @@
+apiVersion: orchestration.example/v1
+kind: CoinWorkflow
+metadata:
+  labels:
+    app.kubernetes.io/name: coinworkflow
+    app.kubernetes.io/instance: coinworkflow-sample
+    app.kubernetes.io/part-of: kubernetes-operator-orchestration-example
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: kubernetes-operator-orchestration-example
+  name: coinworkflow-sample
+spec:
+  # TODO(user): Add fields here

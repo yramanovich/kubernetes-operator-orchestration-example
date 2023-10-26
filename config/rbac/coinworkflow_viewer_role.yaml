@@ -1,0 +1,27 @@
+# permissions for end users to view coinworkflows.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: coinworkflow-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: kubernetes-operator-orchestration-example
+    app.kubernetes.io/part-of: kubernetes-operator-orchestration-example
+    app.kubernetes.io/managed-by: kustomize
+  name: coinworkflow-viewer-role
+rules:
+- apiGroups:
+  - orchestration.example
+  resources:
+  - coinworkflows
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - orchestration.example
+  resources:
+  - coinworkflows/status
+  verbs:
+  - get

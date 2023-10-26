@@ -1,0 +1,32 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: manager-role
+rules:
+- apiGroups:
+  - orchestration.example
+  resources:
+  - coinworkflows
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - orchestration.example
+  resources:
+  - coinworkflows/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - orchestration.example
+  resources:
+  - coinworkflows/status
+  verbs:
+  - get
+  - patch
+  - update
